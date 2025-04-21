@@ -1,0 +1,629 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1742473358112
+  modified: 1742473358112
+collection:
+  - name: get all books
+    meta:
+      id: fld_03e6f3e3c14742cd81373074f9c438e3
+      created: 1743175685008
+      modified: 1743175685008
+      sortKey: -1743175685008
+    children:
+      - url: http://127.0.0.1:8000/api/books/1
+        name: New Request
+        meta:
+          id: req_fbe85ee988a9465faa0921ef0b7d018d
+          created: 1743175692204
+          modified: 1743176267591
+          isPrivate: false
+          sortKey: -1743175692204
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Rentals
+    meta:
+      id: fld_184ad6cebc1345909b5dc0a906cf29dd
+      created: 1745239036444
+      modified: 1745239036444
+      sortKey: -1745239036444
+    children:
+      - name: Homes
+        meta:
+          id: fld_dacc3854a4a84068be27e41ab93d083c
+          created: 1744946313077
+          modified: 1745239045214
+          sortKey: -1745239045101
+        children:
+          - url: localhost/api/v1/properties/homes/
+            name: Get all homes
+            meta:
+              id: req_3471d40f086f44e39e4630ba11e077dc
+              created: 1742473886543
+              modified: 1744946357296
+              isPrivate: false
+              sortKey: -1744946317414.375
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.0
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/homes/create/"
+            name: Create Home
+            meta:
+              id: req_fa3034fe723643fd91e18cb916fc03fe
+              created: 1744490931756
+              modified: 1744946334362
+              isPrivate: false
+              sortKey: -1744946317417.5
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_11a7fb88612b48b1b229dc4328b07f57
+                  name: title
+                  value: Thisisthetitleofthehouse
+                  disabled: false
+                - id: pair_9ff316dbe4eb4206bcdf163873c30dc0
+                  name: description
+                  value: Thisisthedescriptionofthehousemann
+                  disabled: false
+                - id: pair_315fe30bf40d40ac8ad9c1120950ba72
+                  name: price
+                  value: "0"
+                  disabled: false
+                - id: pair_52cb521dca054a8fae1d1749ebe21c7d
+                  name: town
+                  value: Bamenda
+                  disabled: false
+                - id: pair_479c2bae41ae4a06b38ada5a3a808c2b
+                  name: quarter
+                  value: Mile2 Jucntion
+                  disabled: false
+                - id: pair_aa2b4a2293dc4f2aa666554e666e9b29
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-02-27 123733.png
+                - id: pair_13257469936d41c89f5331a05df0039c
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-02-27 124223.png
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MzU0ODM4LCJpYXQiOjE3NDQ0OTA4MzgsImp0aSI6IjVjMGY2YWQ5YjBjOTQ0ODRhOTVhZDgxYjhjZmI1YWIwIiwidXNlcl9pZCI6ImNjMDM1MTVjLTlkMjEtNDY2YS05NmEyLWY3NzU3Yjc4NGJmZCJ9.Q5cugt3394FLPw6fvg5R1t0Ql5dmNSCadirO2lcsHJk
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/homes/update/lively-apartment/"
+            name: Update Home
+            meta:
+              id: req_c9d3be8f1c8d4054871ff9c53f66b67d
+              created: 1744491466262
+              modified: 1744946337890
+              isPrivate: false
+              sortKey: -1744946317411.25
+            method: PUT
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_11a7fb88612b48b1b229dc4328b07f57
+                  name: title
+                  value: Apartment
+                  disabled: false
+                - id: pair_9ff316dbe4eb4206bcdf163873c30dc0
+                  name: description
+                  value: Good Apartment
+                  disabled: false
+                - id: pair_52cb521dca054a8fae1d1749ebe21c7d
+                  name: town
+                  value: Bamenda
+                  disabled: false
+                - id: pair_479c2bae41ae4a06b38ada5a3a808c2b
+                  name: quarter
+                  value: Mile2 Junction
+                  disabled: false
+                - id: pair_0d68dcc48eb94d12801b76a95d86ba13
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-02-27 124223.png
+                - id: pair_71aed3e3cc314605af4f4d6745afa772
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-03-26 144534.png
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{ _.access }}"
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/homes/apartment"
+            name: Get Single Home
+            meta:
+              id: req_f57097605ec34ac5a416b46c1d3b1489
+              created: 1744491559304
+              modified: 1744946332186
+              isPrivate: false
+              sortKey: -1744946317430
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://93a5-41-202-219-247.ngrok-free.app/api/v1/properties/homes/apartment/upload-images/
+            name: Upload New Property Image
+            meta:
+              id: req_32553398362d44969401c2dbb62e7f59
+              created: 1744823055726
+              modified: 1744946329194
+              isPrivate: false
+              sortKey: -1744946317455
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_e33407109aa043a68bbef33c21243b05
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-04-16 085144.png
+                - id: pair_9f338ec7be2644e686d1fec0a68157be
+                  name: images
+                  disabled: false
+                  type: file
+                  multiline: true
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-02-27 124337.png
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: "{{ _.access }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/homes/apartment/images"
+            name: Get Property Images
+            meta:
+              id: req_83027cf7d78945a7971604501f5aff8f
+              created: 1744823238372
+              modified: 1744946325076
+              isPrivate: false
+              sortKey: -1744946317405
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/homes/delete/hsbs/"
+            name: Delete Property
+            meta:
+              id: req_14a711d56cc646d6be24f675f7f26b1d
+              created: 1744926664640
+              modified: 1744946317608
+              isPrivate: false
+              sortKey: -1744946317505
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: "{{ _.access }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Cars
+        meta:
+          id: fld_9e865b350c8a4906b4f366fa469ef259
+          created: 1744946377546
+          modified: 1745239050319
+          sortKey: -1745239045201
+        children:
+          - url: localhost/api/v1/properties/cars/
+            name: Get all cars
+            meta:
+              id: req_0ac81d5d0a6d49219325f3cbc7678df1
+              created: 1744946377549
+              modified: 1744952724449
+              isPrivate: false
+              sortKey: -1744946317414.375
+            method: GET
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_bb7503c39cde4c8a90e8309349d2d690
+                  name: town
+                  value: Mbengwi
+                  disabled: false
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.0
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/cars/create/"
+            name: Create Car
+            meta:
+              id: req_95a624f3c71348f5a04dded49fc4b966
+              created: 1744946377552
+              modified: 1744953388215
+              isPrivate: false
+              sortKey: -1744946317417.5
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_45b715240b7145a384ee487213814f5d
+                  name: make
+                  value: Ford
+                  disabled: false
+                - id: pair_19f46efdbdb54c6794291484ab70af12
+                  name: model
+                  value: F-15
+                  disabled: false
+                - id: pair_52cb521dca054a8fae1d1749ebe21c7d
+                  name: town
+                  value: Bamenda
+                  disabled: false
+                - id: pair_479c2bae41ae4a06b38ada5a3a808c2b
+                  name: quarter
+                  value: Mile2 Jucntion
+                  disabled: false
+                - id: pair_20b88e4aa8bd48668e8b4380549e9620
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-03-21 133701.png
+                - id: pair_d6652ab1a9364a7fb46fa35040c96d55
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-04-16 085144.png
+            parameters:
+              - id: pair_d36faa631ccc471081bb4d6bb509b775
+                disabled: false
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{ _.access }}"
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/cars/update/ford-12/"
+            name: Update Car
+            meta:
+              id: req_88556046febe4a11a73cf720dbf700b8
+              created: 1744946377553
+              modified: 1744960589205
+              isPrivate: false
+              sortKey: -1744946317411.25
+            method: PUT
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_11a7fb88612b48b1b229dc4328b07f57
+                  name: make
+                  value: Ford
+                  disabled: true
+                - id: pair_9ff316dbe4eb4206bcdf163873c30dc0
+                  name: model
+                  value: F-150
+                  disabled: true
+                - id: pair_52cb521dca054a8fae1d1749ebe21c7d
+                  name: town
+                  value: Mbengwi
+                  disabled: true
+                - id: pair_479c2bae41ae4a06b38ada5a3a808c2b
+                  name: quarter
+                  value: Mile2 Junction
+                  disabled: true
+                - id: pair_0d68dcc48eb94d12801b76a95d86ba13
+                  name: images
+                  disabled: true
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-02-27 124223.png
+                - id: pair_71aed3e3cc314605af4f4d6745afa772
+                  name: images
+                  disabled: true
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-03-26 144534.png
+                - id: pair_2f84d90f581e44a29dbaf0f9a9261c27
+                  name: year
+                  value: "2010"
+                  disabled: true
+                - id: pair_fd5a54a24b074aecb13bbcd4e3e0afc9
+                  name: price
+                  value: "6000"
+                  disabled: false
+                - id: pair_45561cbc4e4d4ba6b7de3a2cbfb72c00
+                  name: transmission
+                  value: manual
+                  disabled: false
+                - id: pair_b7fb9d5eca164fbb9867047f4a36ed3d
+                  name: mileage
+                  value: "1600"
+                  disabled: false
+                - id: pair_4a9d3b3d88eb4a5e8efe6d5ae79f044f
+                  name: fuel_type
+                  value: petrol
+                  disabled: false
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              disabled: false
+              token: "{{ _.access }}"
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/cars/ford-12"
+            name: Get Single Car
+            meta:
+              id: req_25ee0c168ca2486c9e937483b645f340
+              created: 1744946377554
+              modified: 1744953889859
+              isPrivate: false
+              sortKey: -1744946317430
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/cars/ford-12/upload-images/"
+            name: Upload New Property Image
+            meta:
+              id: req_5f822a8004764b399d059d273e32e97e
+              created: 1744946377556
+              modified: 1744953954807
+              isPrivate: false
+              sortKey: -1744946317455
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - id: pair_e33407109aa043a68bbef33c21243b05
+                  name: images
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-04-16 085144.png
+                - id: pair_9f338ec7be2644e686d1fec0a68157be
+                  name: images
+                  disabled: false
+                  type: file
+                  multiline: true
+                  fileName: C:\Users\micle\Pictures\Screenshots\Screenshot 2025-02-27 124337.png
+            headers:
+              - name: Content-Type
+                value: multipart/form-data
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: "{{ _.access }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/cars/ford-12/images"
+            name: Get Property Images
+            meta:
+              id: req_8c2b89bb25f240bd9e3df6a985679821
+              created: 1744946377558
+              modified: 1744953861899
+              isPrivate: false
+              sortKey: -1744946317405
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.baseURL }}/api/v1/properties/homes/delete/hsbs/"
+            name: Delete Property
+            meta:
+              id: req_4829286ff61142fcb74ef4c503cf1626
+              created: 1744946377559
+              modified: 1744946377559
+              isPrivate: false
+              sortKey: -1744946317505
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: "{{ _.access }}"
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - url: "{{ _.baseURL }}/api/v1/auth/jwt/create/"
+        name: Login
+        meta:
+          id: req_b703ef8b72474033becc2e6b7f4c1786
+          created: 1742473902650
+          modified: 1745239056535
+          isPrivate: false
+          sortKey: -1745239045126
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "admin@mail.com",
+            	"password": "admin"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost/api/v1/auth/users/me
+        name: New Request
+        meta:
+          id: req_e3447078419346ccbb0c48b9c39e8241
+          created: 1742474113245
+          modified: 1745239054772
+          isPrivate: false
+          sortKey: -1745239045151
+        method: GET
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MzU0ODM4LCJpYXQiOjE3NDQ0OTA4MzgsImp0aSI6IjVjMGY2YWQ5YjBjOTQ0ODRhOTVhZDgxYjhjZmI1YWIwIiwidXNlcl9pZCI6ImNjMDM1MTVjLTlkMjEtNDY2YS05NmEyLWY3NzU3Yjc4NGJmZCJ9.Q5cugt3394FLPw6fvg5R1t0Ql5dmNSCadirO2lcsHJk
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742473375748
+    modified: 1742473375748
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742473375600
+    modified: 1742473375600
+    isPrivate: false
